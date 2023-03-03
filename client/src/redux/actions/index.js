@@ -3,7 +3,7 @@ import { GET_GAMES, GET_GAME_BY_ID, GET_GAME_BY_NAME, ORDER_ALFABETIC, ORDER_RAT
 
 export function getGames() {
   return async function (dispatch) {
-    let games = await axios.get("http://localhost:3001/videogames");
+    let games = await axios.get("https://pi-videogames-main-production-5f0f.up.railway.app/videogames");
     return dispatch({
       type: GET_GAMES,
       payload: games.data 
@@ -13,7 +13,7 @@ export function getGames() {
 
 export const getGameByName = (name) => {
   return async function(dispatch){
-    let games = await axios.get(`http://localhost:3001/videogames?name=${name}`)
+    let games = await axios.get(`https://pi-videogames-main-production-5f0f.up.railway.app/videogames?name=${name}`)
     return dispatch({
       type: GET_GAME_BY_NAME,
       payload: games.data
@@ -23,7 +23,7 @@ export const getGameByName = (name) => {
 
 export const getGenres = () => {
   return async function (dispatch) {
-    let genres = await axios.get(`http://localhost:3001/genres`)
+    let genres = await axios.get(`https://pi-videogames-main-production-5f0f.up.railway.app/genres`)
     return dispatch({
       type: GET_GENRES,
       payload: genres.data
@@ -33,7 +33,7 @@ export const getGenres = () => {
 
 export const getPlatforms = () => {
   return async function (dispatch) {
-    let platforms = await axios.get(`http://localhost:3001/platforms`)
+    let platforms = await axios.get(`https://pi-videogames-main-production-5f0f.up.railway.app/platforms`)
     return dispatch({
       type: GET_PLATFORMS,
       payload: platforms.data
@@ -44,7 +44,7 @@ export const getPlatforms = () => {
 
 export function getGameById(id){
   return async function(dispatch) {
-    let game = await axios.get(`http://localhost:3001/videogames/${id}`)
+    let game = await axios.get(`https://pi-videogames-main-production-5f0f.up.railway.app/videogames/${id}`)
     return dispatch({
       type: GET_GAME_BY_ID,
       payload: game.data
@@ -83,7 +83,7 @@ export const postVideogames = (payload) => {
   return async function () {
     try {
       let respuesta = await axios.post(
-        `http://localhost:3001/videogames`,
+        `https://pi-videogames-main-production-5f0f.up.railway.app/videogames`,
         payload
       );
       alert("Videogame Created");
