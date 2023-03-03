@@ -1,0 +1,137 @@
+.detailContainers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 3%;
+    background-image: url('../images/man-g7ac4d4765_1920.jpg');
+  }
+  
+  .cardImage {
+    width: 50%;
+    height: 70vh;
+  }
+  
+  .detailText {
+    color: #ffffff;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+  .cardTitles {
+    align-self: center;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  
+  .cardInfo {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 2%;
+  }
+  
+  .cardSpan {
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 1%;
+  }
+  
+  .boton {
+    cursor: pointer;
+    position: absolute;
+    padding: 0.3% 0;
+    left: 4%;
+    top: 6%;
+    text-decoration: none;
+    color: #ff0000;
+    font-size: 1.1rem;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+  }
+  
+  .boton:hover {
+    color: #02ff4a;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 1000px) {
+    .cardImg {
+      width: 50%;
+      height: 50vh;
+    }
+  
+    .detailText {
+      color: rgb(216, 2, 2);
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+    }
+    .cardTitle {
+      font-size: 1.7rem;
+      font-weight: 800;
+    }
+  
+    .cardInf {
+      font-size: 1.1rem;
+    }
+  
+    .cardSpan {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .detailContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3%;
+    }
+  
+    .cardImg {
+      height: 40vh;
+    }
+  
+    .detailText {
+      width: 90%;
+    }
+  
+    .cardTitle {
+      margin-top: 2%;
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin-bottom: 0;
+    }
+  
+    .cardInf {
+      margin-top: 2%;
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+  
+    .cardSpan {
+      margin-top: 2%;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .detailContainer {
+      padding: 8% 0;
+    }
+    .cardImg {
+      margin-top: 10%;
+      height: 20vh;
+    }
+  
+    .btn {
+      left: 2%;
+      top: 1%;
+      font-size: 0.8rem;
+    }
+  }
+  

@@ -1,0 +1,157 @@
+Button {
+    position: relative;
+    width: 9em;
+    height: 4em;
+    outline: none;
+    transition: 0.1s;
+    background-color: transparent;
+    border: none;
+    font-size: 19px;
+    font-weight: bold;
+    color: #04fe5c;
+  }
+  @media screen and (min-width: 768px) {
+    Button {
+      width: 30%;
+      max-width: 9em;
+      height: 4vw;
+      max-height: 4em;
+      font-size: 1.5vw;
+    }
+  }
+  
+  #clip {
+    --color: transparent;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 5px double var(--color);
+    box-shadow: inset 0px 0px 15px #04fe5c;;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  }
+  @media screen and (min-width: 768px) {
+    #clip {
+      border: 1vw double var(--color);
+      box-shadow: inset 0px 0px 2.5vw #04fe5c;;
+    }
+  }
+  
+  .arrow {
+    position: absolute;
+    transition: 0.2s;
+    background-color: #04fe5c;
+    top: 40%;
+    width: 10%;
+    height: 30%;
+  }
+  
+  #leftArrow {
+    left: -15.5%;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  }
+  
+  #rightArrow {
+    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+    left: 105.5%;
+  }
+  
+  Button:hover #rightArrow {
+    background-color: #04fe5c;
+    left: -25%;
+    animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+  }
+  
+  Button:hover #leftArrow {
+    background-color: #04fe5c;
+    left: 115%;
+    animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+  }
+  
+  .corner {
+    position: absolute;
+    width: em;
+    height: em;
+    background-color: transparent;;
+    box-shadow: inset 1px 1px 8px #f104fe;;
+    transform: scale(1) rotate(45deg);
+    transition: 0.2s;
+  }
+  
+  Button:hover .corner {
+    transform: scale(1.25) rotate(45deg);
+  }
+  
+  Button:hover #clip {
+    animation: 0.2s ease-in-out 0.55s both greenLight8;
+    --color: #04fe5c;;
+  }
+  
+  @keyframes changeColor8 {
+    from {
+      background-color: transparent;;
+    }
+  
+    to {
+      background-color: transparent;;
+    }
+  }
+  
+  @keyframes lightEffect8 {
+    from {
+      box-shadow: 1px 1px 5px  #04fe5c;;
+    }
+  
+    to {
+      box-shadow: 0 0 2px #04fe5c;;
+    }
+  }
+  
+  @keyframes greenLight8 {
+    from {
+    }
+  
+    to {
+      box-shadow: inset 0px 0px 32px #04fe5c;;;
+    }
+  }
+  
+  @keyframes leftArrow8 {
+    from {
+      transform: translate(0px);
+    }
+  
+    to {
+      transform: translateX(10px);
+    }
+  }
+  
+  @keyframes rightArrow8 {
+    from {
+      transform: translate(0px);
+    }
+  
+    to {
+      transform: translateX(-10px);
+    }
+  }
+  
+  .mainContainer {
+    position: relative;
+  }
+
+  .video {
+    width: 100%;
+  }
+
+  .video-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:78%;
+    left: 50.9%;
+    transform: translate(-50%, -50%);
+  }
+
